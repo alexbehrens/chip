@@ -1,9 +1,8 @@
-# Chippy
-
-![Chippy Logo](images/chip1.png)
+# Meet Chippy
+## Open-source CLI assistant built for n00bs and anyone else who never memorized git commands 🤖
 
 <p align="center">
-  <img src="images/chip1.png" width="100px">
+  <img src="images/chip1.png" width="250px">
 </p>
 
 A command-line interface (CLI) assistant designed to help beginner and intermediate programmers navigate common programming pitfalls without leaving the terminal.
