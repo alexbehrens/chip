@@ -14,19 +14,19 @@ To use the Clippy Assistant, follow these steps:
 
 The `main.py` file contains the following functions:
 
-### Function 1
+### Error solving
 
 Description of function 1.
 
-### Function 2
+### Q&A
 
 Description of function 2.
 
-### Function 3
+### Shell Command Cheatsheet
 
 Description of function 3.
 
-### Function 4
+### Git Cheatsheet
 
 Description of function 4.
 
