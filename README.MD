@@ -2,6 +2,10 @@
 
 ![Chippy Logo](images/chip1.png)
 
+<p align="center">
+  <img src="images/chip1.png" width="100px">
+</p>
+
 A command-line interface (CLI) assistant designed to help beginner and intermediate programmers navigate common programming pitfalls without leaving the terminal.
 
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
