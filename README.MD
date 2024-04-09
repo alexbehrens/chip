@@ -51,19 +51,18 @@ Gif placeholder
 3. **Usage**
 
 
-    ####Error analysis
+    **Error Analysis**
     Encounter an error? Let chippy do the initial diagnosis!
     
-    It is important to note tha that tha
+    It is important to note the program captures the error by rerunning the last terminal command. This operation is not reccomendable if the compile/runtime? is long or costly.
     
-     by asking Chippy a question or requesting help with a command:
     ```bash
     chippy error
     ```
 
     test
 
-    ```bash
+    ```txt
     ╭───────────────────────────────────────────────────────────────╮
     │ Chippy is executing the last command: hfghfxh                 │
     ╰───────────────────────────────────────────────────────────────╯
@@ -89,19 +88,15 @@ Gif placeholder
     ```
 
 
-    Dive into error analysis with a simple command:
-    ```bash
-    chippy error
-    ```
 
-    Access cheat sheets for quick reference:
-    ```bash
-    chippy cheatsheet git
-    ```
 
-## Documentation
+## Roadmap
+- Bash/Windows support - currently optimized for ZSH on mac
+- Modular LLM support - switch between local and other hosted models
+- Opt-in perpetual logging - always-on terminal logging unlocks new debugging potential
+- Adding files/functions into context from error message
+- Internet connectivity
 
-For detailed instructions on installation, configuration, and usage, visit our [documentation](https://chippy.io/docs).
 
 ## Background and Rationale
 
@@ -123,4 +118,5 @@ Chippy is open-source software licensed under the [MIT license](https://chippy.i
 
 ---
 
-"Chippy: the friendly CLI assistant, because even small seconds saved make a big difference."
+> "Chippy: the friendly CLI assistant, because even small seconds saved make a big difference."
+
