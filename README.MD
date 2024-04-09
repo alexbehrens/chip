@@ -1,17 +1,14 @@
 # Meet Chippy
-## Open-source CLI assistant built for n00bs and anyone else who never memorized git commands 🤖
-
-<p align="center">
-  <img src="images/chip1.png" width="250px">
-</p>
-
-A command-line interface (CLI) assistant designed to help beginner and intermediate programmers navigate common programming pitfalls without leaving the terminal.
 
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
 ![Platform](https://img.shields.io/badge/platform-ZSH%20|%20Bash-lightgrey.svg)
+
+<p align="center">
+  <img src="images/chip1.png" width="250px">
+</p>
 
 Chippy serves as your command-line companion, offering quick fixes, error analyses, and cheat sheets directly in your terminal environment. It bridges the gap between encountering an error and finding the solution, saving you the hassle of manual searches or sifting through documentation.
 
@@ -64,7 +61,7 @@ Gif placeholder
 
     ```txt
     ╭───────────────────────────────────────────────────────────────╮
-    │ Chippy is executing the last command: hfghfxh                 │
+    │ Chippy is executing the last command: list                    │
     ╰───────────────────────────────────────────────────────────────╯
     ╭───────────────────────────────────────────────────────────────╮
     │ Error detected: Yes                                           │
@@ -74,16 +71,15 @@ Gif placeholder
     │ △ Chippy Detailed Error Analysis △                            │
     ╰───────────────────────────────────────────────────────────────╯
     ╭───────────────────────────────────────────────────────────────╮
-    │ The error message "command not found" indicates that the      │
-    │ system could not locate a command with the name "hfghfxh".    │
-    │ This is likely because "hfghfxh" is not a valid terminal      │
-    │ command. The user might have misspelled or mistyped the       │
-    │ command.                                                      │
+    │ The error message "command not found" typically means that    │
+    │ the command you entered cannot be located in your system's    │
+    │ PATH. In this case, "list" is not a recognized command in     │
+    │ your current shell environment.                               │
     │                                                               │
-    │ To fix this error, the user should check the spelling and try │
-    │ entering a valid command. For example, if the user intended   │
-    │ to list the files in the current directory, the correct       │
-    │ command would be "ls".                                        │
+    │ A more common command that serves a similar purpose is "ls",  │
+    │ which is used to list the contents of a directory. It's       │
+    │ possible that the user may have accidentally typed "list"     │
+    │ instead of "ls".                                              │
     ╰───────────────────────────────────────────────────────────────╯
     ```
 
