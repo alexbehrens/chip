@@ -15,6 +15,8 @@ A command-line interface (CLI) assistant designed to help beginner and intermedi
 
 Chippy serves as your command-line companion, offering quick fixes, error analyses, and cheat sheets directly in your terminal environment. It bridges the gap between encountering an error and finding the solution, saving you the hassle of manual searches or sifting through documentation.
 
+Gif placeholder
+
 ## Features
 
 - **Error Analysis**: Understand and fix common programming errors with detailed, context-aware suggestions.
@@ -33,18 +35,59 @@ Chippy serves as your command-line companion, offering quick fixes, error analys
     pip install chippy
     ```
 
+    Install Chippy using Homebrew:
+    ```bash
+    brew install chippy
+    ```
+
 2. **Configuration**
 
-    Set up your environment:
+    Set up your together.ai key:
     - Save API keys in your environment variables for secure access.
+    - Enter keys via command ```bash chip api "YOUR_KEY_HERE"``` 
+    - or via the `config.ini` file
     - Configure Chippy to your liking through the `config.ini` file or via command-line options.
 
 3. **Usage**
 
-    Start by asking Chippy a question or requesting help with a command:
+
+    ####Error analysis
+    Encounter an error? Let chippy do the initial diagnosis!
+    
+    It is important to note tha that tha
+    
+     by asking Chippy a question or requesting help with a command:
     ```bash
-    chippy "What is a function in Python?"
+    chippy error
     ```
+
+    test
+
+    ```bash
+    ╭───────────────────────────────────────────────────────────────╮
+    │ Chippy is executing the last command: hfghfxh                 │
+    ╰───────────────────────────────────────────────────────────────╯
+    ╭───────────────────────────────────────────────────────────────╮
+    │ Error detected: Yes                                           │
+    │ Type: CommandNotFoundError | NoSuch                           │
+    ╰───────────────────────────────────────────────────────────────╯
+    ╭───────────────────────────────────────────────────────────────╮
+    │ △ Chippy Detailed Error Analysis △                            │
+    ╰───────────────────────────────────────────────────────────────╯
+    ╭───────────────────────────────────────────────────────────────╮
+    │ The error message "command not found" indicates that the      │
+    │ system could not locate a command with the name "hfghfxh".    │
+    │ This is likely because "hfghfxh" is not a valid terminal      │
+    │ command. The user might have misspelled or mistyped the       │
+    │ command.                                                      │
+    │                                                               │
+    │ To fix this error, the user should check the spelling and try │
+    │ entering a valid command. For example, if the user intended   │
+    │ to list the files in the current directory, the correct       │
+    │ command would be "ls".                                        │
+    ╰───────────────────────────────────────────────────────────────╯
+    ```
+
 
     Dive into error analysis with a simple command:
     ```bash
