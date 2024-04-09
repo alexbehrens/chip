@@ -114,8 +114,8 @@ Chippy is open-source software licensed under the [MIT license](https://chippy.i
 
 ---
 
-> "Chippy: the friendly CLI assistant, because even small seconds saved make a big difference."
 <p align="center">
   <img src="images/chip2.png" width="100px">
 </p>
 
+> "Chippy: the friendly CLI assistant, because even small seconds saved make a big difference."
