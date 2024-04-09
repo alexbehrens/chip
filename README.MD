@@ -10,7 +10,7 @@
   <img src="images/chip1.png" width="250px">
 </p>
 
-Chippy serves as your command-line companion, offering quick fixes, error analyses, and cheat sheets directly in your terminal environment. It bridges the gap between encountering an error and finding the solution, saving you the hassle of manual searches or sifting through documentation.
+Chippy serves as your command-line companion, offering quick fixes, error analyses, and cheat sheets directly in your terminal environment. It bridges the gap between encountering an error and finding the solution, saving you the hassle of manual searches or sifting through documentation. To make things easier, Chippy goes by their nickname `chip` in the commmand line.
 
 Gif placeholder
 
@@ -51,14 +51,16 @@ Gif placeholder
     **Error Analysis**
     Encounter an error? Let chippy do the initial diagnosis!
     
-    It is important to note the program captures the error by rerunning the last terminal command. This operation is not reccomendable if the compile/runtime? is long or costly.
-    
+    >It is important to note the program captures the error by rerunning the last terminal command. This operation is not reccomendable if the compile/runtime? is long or costly.
+
+
+    `input`
     ```bash
-    chippy error
+    chip error
     ```
 
-    test
-
+    
+    `output`
     ```txt
     ╭───────────────────────────────────────────────────────────────╮
     │ Chippy is executing the last command: list                    │
@@ -83,8 +85,55 @@ Gif placeholder
     ╰───────────────────────────────────────────────────────────────╯
     ```
 
+    **Q&A**
+    Have a quick question? Too lazy to switch windows? Chippy can easily answer any of programming questions straight from the commandline.
+        
+    ```bash
+    chip -q "how do I convert an integer to a string in python?"
+    ```
 
 
+    ```txt
+    ╭───────────────────────────────────────────────────────────────╮
+    │ △ Chippy Q&A △                                                │
+    ╰───────────────────────────────────────────────────────────────╯
+    ╭───────────────────────────────────────────────────────────────╮
+    │ Q: how do I convert an integer to a string in python?         │
+    │                                                               │
+    │ A:  In Python, you can convert an integer to a string using   │
+    │ the `str()` function. Here's an example:                      │
+    │ ```python                                                     │
+    │ num = 123                                                     │
+    │ num_str = str(num)                                            │
+    │ print(type(num_str))  # <class 'str'>                         │
+    │ ```                                                           │
+    │ In this example, the integer `123` is converted to a string   │
+    │ `'123'` using the `str()` function. The `type()` function is  │
+    │ then used to confirm that the result is indeed a string.      │
+    ╰───────────────────────────────────────────────────────────────╯
+     ```
+
+     **Cheatsheets**
+    Forget a basic command? Chippy has you covered with cheatsheets for shell commands, git, python, and javascript
+        
+    ```bash
+    chip git
+    ```
+
+   ```txt
+    ╭───────────────────────────────────────────────────────────────╮
+    │ git init - Initialize a new git repository.                   │
+    │ $ git init                                                    │
+    │                                                               │
+    │ git clone - Clone a repository into a new directory.          │
+    │ $ git clone https://github.com/user/repo.git                  │
+    │                                                               │
+    │ git add - Add file contents to the index.                     │
+    │ $ git add .                                                   │
+    │                                                               │
+    │                           ....                                │
+    ╰───────────────────────────────────────────────────────────────╯
+    ```
 
 ## Roadmap
 - Bash/Windows support - currently optimized for ZSH on mac
