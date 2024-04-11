@@ -15,11 +15,11 @@ jobs:
       with:
         python-version: '3.x'
     - name: Install Poetry
-      working-directory: ./
       run: |
         curl -sSL https://install.python-poetry.org | python -
         echo "$HOME/.local/bin" >> $GITHUB_PATH
     - name: Build and publish to PyPI
+      working-directory: .
       env:
         POETRY_PYPI_TOKEN_PYPI: ${{ secrets.PYPI_API_TOKEN }}
       run: |
