@@ -21,7 +21,7 @@ hardcore_mode = config['DEFAULT'].get('Hardcore', 'no').lower()
 
 
 
-
+#test change
 
 
 
