@@ -5,6 +5,8 @@ import subprocess
 import configparser
 from openai import OpenAI
 
+
+#old config
 # Read configuration
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -12,10 +14,65 @@ config.read('config.ini')
 # Configurations for ERROR and QUESTION
 ERROR_CONFIG = config['ERROR']
 QUESTION_CONFIG = config['QUESTION']
-
 mode = ERROR_CONFIG.get('Default', 'HardcoreMode')
-
 hardcore_mode = config['DEFAULT'].get('Hardcore', 'no').lower()
+
+
+
+
+
+
+
+
+
+
+#new config
+import configparser
+import importlib.resources as pkg_resources
+
+def load_configuration():
+    # Use the 'open_text' method from 'importlib.resources' to access the 'config.ini' within the package
+    with pkg_resources.open_text('chip', 'config.ini') as config_file:
+        config = configparser.ConfigParser()
+        config.read_file(config_file)
+        return config
+
+# Load the configuration when the module is loaded
+config = load_configuration()
+
+# Access the specific configuration sections
+ERROR_CONFIG = config['ERROR']
+QUESTION_CONFIG = config['QUESTION']
+
+# Assuming 'Default' is a section in your config.ini, and 'HardcoreMode' is a key within that section
+mode = config.get('Default', 'HardcoreMode', fallback='HardcoreModeDefault')
+hardcore_mode = config.get('DEFAULT', 'Hardcore', fallback='no').lower()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#read .env
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # load all the environment variables from a .env file
+
+api_key = os.getenv("TOGETHER_API_KEY")
+
+
+
 
 
 def format_in_rectangle(text, width=65, color_code='\033[94m'):
