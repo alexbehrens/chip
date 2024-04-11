@@ -14,24 +14,16 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.12'  # Ensure this matches the Python version you want to use
+        python-version: '3.12'  # Adjust as needed to match your project's Python version
 
-    - name: Install Hatch
+    - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        python -m pip install hatchling
-        python -m pip list  # Debug: list installed packages
-
-    - name: Debug Python environment
-      run: |
-        which python
-        python -m site
-        python -m pip list
+        python -m pip install hatch hatchling
 
     - name: Build and publish to PyPI
       env:
         PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
       run: |
-        python -m hatchling build
-        python -m hatchling publish --username=__token__ --password=$PYPI_TOKEN
-      
+        hatch build
+        hatch publish --username=__token__ --password=$PYPI_TOKEN
