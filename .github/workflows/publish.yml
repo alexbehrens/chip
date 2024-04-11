@@ -32,6 +32,6 @@ jobs:
       env:
         PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
       run: |
-        python -m hatch build
-        python -m hatch publish --username=__token__ --password=$PYPI_TOKEN
+        python -m hatchling build
+        python -m hatchling publish --username=__token__ --password=$PYPI_TOKEN
       
