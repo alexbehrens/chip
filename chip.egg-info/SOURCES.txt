@@ -1,3 +1,4 @@
+LICENSE
 MANIFEST.in
 setup.py
 chip/__init__.py

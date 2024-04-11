@@ -1,0 +1,24 @@
+name: Publish to PyPI
+
+on:
+  push:
+    tags:
+      - '*.*.*'
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install Poetry
+      run: |
+        curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+        echo "$HOME/.poetry/bin" >> $GITHUB_PATH
+    - name: Build and publish to PyPI
+      run: |
+        poetry build
+        poetry publish --username __token__ --password ${{ secrets.PYPI_API_TOKEN }}

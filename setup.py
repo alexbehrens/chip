@@ -3,13 +3,14 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='chip',
+    name='chippy-ai',
     version='0.1',
     packages=find_packages(),
-    package_data={'chip': ['config.ini']},
+    package_data={'chippy_ai': ['config.ini']},
     entry_points={
         'console_scripts': [
-            'chip=chip.main:main',
+            'chip=chippy_ai.main:main',
+            #'chip=chip.main:main',
         ],
     }
 )
