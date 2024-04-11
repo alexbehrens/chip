@@ -13,4 +13,4 @@ classifiers = [
     "License :: OSI Approved :: Apache Software License", 
     "Operating System :: OS Independent",
 ]
-readme = "README.md"
+readme = "./chippy_ai/README.md"
