@@ -1,8 +1,8 @@
 LICENSE
 MANIFEST.in
 setup.py
-chip/__init__.py
-chip/main.py
+chippy_ai/__init__.py
+chippy_ai/main.py
 chippy_ai.egg-info/PKG-INFO
 chippy_ai.egg-info/SOURCES.txt
 chippy_ai.egg-info/dependency_links.txt
