@@ -11,13 +11,18 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        fetch-depth: 0  # Ensure full git history and all files are checked out
+        fetch-depth: 0
 
     - name: Set up Python
       uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
 
-    - name: List files in the directory
-      run: ls -la  # Debugging step to verify files
+    - name: Print working directory and list files
+      run: |
+        pwd
+        ls -la
+        cat README.md
 
     - name: Install dependencies
       run: |
@@ -30,3 +35,4 @@ jobs:
       run: |
         hatch build
         hatch publish --username=__token__ --password=$PYPI_TOKEN
+      
