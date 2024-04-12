@@ -19,3 +19,6 @@ classifiers = [
 [project.urls]
 Homepage = "https://github.com/alexbehrens/chip"
 Issues = "https://github.com/alexbehrens/chip/issues"
+
+[project.scripts]
+chip = "chippy_ai.main:main"

@@ -32,7 +32,7 @@ import importlib.resources as pkg_resources
 
 def load_configuration():
     # Use the 'open_text' method from 'importlib.resources' to access the 'config.ini' within the package
-    with pkg_resources.open_text('chip', 'config.ini') as config_file:
+    with pkg_resources.open_text('chippy_ai', 'config.ini') as config_file:
         config = configparser.ConfigParser()
         config.read_file(config_file)
         return config
