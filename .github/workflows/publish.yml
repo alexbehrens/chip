@@ -32,6 +32,6 @@ jobs:
     - name: Build and publish to PyPI
       run: |
         hatch build
-        hatch publish --username=__token__ --password=$PYPI_TOKEN
+        hatch publish --user=__token__ --password=$PYPI_API_TOKEN
       env:
         PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
