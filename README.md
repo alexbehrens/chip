@@ -13,7 +13,7 @@
 Chippy serves as your command-line companion, offering quick fixes, error analyses, and cheat sheets directly in your terminal environment. It bridges the gap between encountering an error and finding the solution, saving you the hassle of manual searches or sifting through documentation. To make things easier, Chippy goes by their nickname `chip` in the commmand line.
 
 <p align="center">
-  <img src="demo.gif" alt="animated" />
+  <img src="images/demo.gif" alt="animated" />
 </p>
 ## Features
 
