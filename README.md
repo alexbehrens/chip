@@ -10,7 +10,7 @@
   <img src="images/chip1.png" width="250px">
 </p>
 
-Chippy serves as your command-line companion, offering quick fixes, error analyses, and cheat sheets directly in your terminal environment. It bridges the gap between encountering an error and finding the solution, saving you the hassle of manual searches or sifting through documentation. To make things easier, Chippy goes by their nickname `chip` in the commmand line. Run `pip install chippy-ai` to get started.
+Chippy serves as your command-line companion, offering quick fixes, error analyses, and cheat sheets directly in your terminal environment. It bridges the gap between encountering an error and finding the solution, saving you the hassle of manual searches or sifting through documentation. To make things easier, Chippy goes by their nickname, `chip`, in the commmand line. Run `pip install chippy-ai` to get started.
 
 <p align="center">
   <img src="images/demo.gif" alt="animated" />
@@ -31,17 +31,12 @@ Chippy serves as your command-line companion, offering quick fixes, error analys
 
     Install Chippy using pip:
     ```bash
-    pip install chippy
-    ```
-
-    Install Chippy using Homebrew:
-    ```bash
-    brew install chippy
+    pip install chippy-ai
     ```
 
 2. **Configuration**
 
-    Set up your together.ai key:
+    Set up your [together.ai](https://together.ai) key:
     - Save API keys in your environment variables for secure access.
     - Enter keys via command ```bash chip api "YOUR_KEY_HERE"``` 
     - or via the `config.ini` file
@@ -53,7 +48,7 @@ Chippy serves as your command-line companion, offering quick fixes, error analys
     **Error Analysis**
     Encounter an error? Let chippy do the initial diagnosis!
     
-    >It is important to note the program captures the error by rerunning the last terminal command. This operation is not reccomendable if the compile/runtime? is long or costly.
+    >It is important to note that Chippy captures the error by rerunning the last terminal command. This operation is not reccomended if the operation's compile/runtime is long or costly.
 
 
     `input`
