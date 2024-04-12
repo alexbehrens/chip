@@ -10,11 +10,12 @@
   <img src="images/chip1.png" width="250px">
 </p>
 
-Chippy serves as your command-line companion, offering quick fixes, error analyses, and cheat sheets directly in your terminal environment. It bridges the gap between encountering an error and finding the solution, saving you the hassle of manual searches or sifting through documentation. To make things easier, Chippy goes by their nickname `chip` in the commmand line.
+Chippy serves as your command-line companion, offering quick fixes, error analyses, and cheat sheets directly in your terminal environment. It bridges the gap between encountering an error and finding the solution, saving you the hassle of manual searches or sifting through documentation. To make things easier, Chippy goes by their nickname `chip` in the commmand line. Run `pip install chippy-ai` to get started.
 
 <p align="center">
   <img src="images/demo.gif" alt="animated" />
 </p>
+
 ## Features
 
 - **Error Analysis**: Understand and fix common programming errors with detailed, context-aware suggestions.
@@ -89,11 +90,12 @@ Chippy serves as your command-line companion, offering quick fixes, error analys
     **Q&A**
     Have a quick question? Too lazy to switch windows? Chippy can easily answer any of programming questions straight from the commandline.
         
+    `input`    
     ```bash
     chip -q "how do I convert an integer to a string in python?"
     ```
 
-
+    `output`
     ```txt
     ╭───────────────────────────────────────────────────────────────╮
     │ △ Chippy Q&A △                                                │
@@ -116,11 +118,13 @@ Chippy serves as your command-line companion, offering quick fixes, error analys
 
      **Cheatsheets**
     Forget a basic command? Chippy has you covered with cheatsheets for shell commands, git, python, and javascript
-        
+    
+    `input`
     ```bash
     chip git
     ```
 
+    `output`
    ```txt
     ╭───────────────────────────────────────────────────────────────╮
     │ git init - Initialize a new git repository.                   │
@@ -148,15 +152,6 @@ Chippy serves as your command-line companion, offering quick fixes, error analys
 
 Why Chippy? In a world where quick access to information is crucial, Chippy aims to reduce the friction experienced by programmers when switching context between coding and searching for solutions or command syntax.
 
-Read more about the development and philosophy behind Chippy in our blog posts:
-- [Introducing Chippy: Your CLI Sidekick](https://chippy.io/blog/introducing-chippy)
-- [How Chippy Simplifies Programming Workflow](https://chippy.io/blog/simplifying-workflow)
-
-## Community and Contributions
-
-Join our community on [Discord](https://chippy.io/discord) to discuss features, share feedback, and help shape the future of Chippy.
-
-Interested in contributing? Check out our [contribution guidelines](https://chippy.io/contributing).
 
 ## License
 
