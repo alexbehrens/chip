@@ -6,7 +6,7 @@ setup(
     name='chippy-ai',
     version='0.1',
     packages=find_packages(),
-    package_data={'chippy_ai': ['config.ini']},
+    package_data={'chippy_ai': ['config.ini', 'README.md']}, 
     entry_points={
         'console_scripts': [
             'chip=chippy_ai.main:main',
