@@ -6,6 +6,7 @@ build-backend = "hatchling.build"
 name = "chippy_ai"
 version = "0.0.1"
 description = "A small example package"
+readme = "README.md"
 authors = [{ name = "Alex Behrens", email = "alexanderbbehrens@gmail.com" }]
 requires-python = ">=3.8"
 classifiers = [
@@ -13,4 +14,8 @@ classifiers = [
     "License :: OSI Approved :: Apache Software License", 
     "Operating System :: OS Independent",
 ]
-readme = "README.md"
+
+
+[project.urls]
+Homepage = "https://github.com/alexbehrens/chip"
+Issues = "https://github.com/alexbehrens/chip/issues"
