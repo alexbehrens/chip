@@ -8,38 +8,38 @@ from openai import OpenAI
 
 #old config
 # Read configuration
-config = configparser.ConfigParser()
-config.read('config.ini')
+#config = configparser.ConfigParser()
+#config.read('config.ini')
 
 # Configurations for ERROR and QUESTION
-ERROR_CONFIG = config['ERROR']
-QUESTION_CONFIG = config['QUESTION']
-mode = ERROR_CONFIG.get('Default', 'HardcoreMode')
-hardcore_mode = config['DEFAULT'].get('Hardcore', 'no').lower()
+#ERROR_CONFIG = config['ERROR']
+#QUESTION_CONFIG = config['QUESTION']
+#mode = ERROR_CONFIG.get('Default', 'HardcoreMode')
+#hardcore_mode = config['DEFAULT'].get('Hardcore', 'no').lower()
 
 
 
 
 
 #test change
-
-
-
-
-#new config
 import configparser
 import importlib.resources as pkg_resources
 
 def load_configuration():
-    # Use the 'open_text' method from 'importlib.resources' to access the 'config.ini' within the package
-    with pkg_resources.open_text('chippy_ai', 'config.ini') as config_file:
-        config = configparser.ConfigParser()
-        config.read_file(config_file)
-        return config
+    try:
+        with pkg_resources.open_text('chippy_ai', 'config.ini') as config_file:
+            config = configparser.ConfigParser()
+            config.read_file(config_file)
+            # Debug: Print out sections and keys to verify
+            print("Available sections:", config.sections())
+            for section in config.sections():
+                print(f"Keys in {section}: {list(config[section])}")
+            return config
+    except Exception as e:
+        print(f"Failed to read or parse config.ini: {e}")
+        raise
 
-# Load the configuration when the module is loaded
 config = load_configuration()
-
 # Access the specific configuration sections
 ERROR_CONFIG = config['ERROR']
 QUESTION_CONFIG = config['QUESTION']
@@ -47,9 +47,6 @@ QUESTION_CONFIG = config['QUESTION']
 # Assuming 'Default' is a section in your config.ini, and 'HardcoreMode' is a key within that section
 mode = config.get('Default', 'HardcoreMode', fallback='HardcoreModeDefault')
 hardcore_mode = config.get('DEFAULT', 'Hardcore', fallback='no').lower()
-
-
-
 
 
 
