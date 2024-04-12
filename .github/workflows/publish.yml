@@ -30,9 +30,8 @@ jobs:
         python -m pip install hatch hatchling
 
     - name: Build and publish to PyPI
-      env:
-        PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
       run: |
         hatch build
         hatch publish --username=__token__ --password=$PYPI_TOKEN
-      
+      env:
+        PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
