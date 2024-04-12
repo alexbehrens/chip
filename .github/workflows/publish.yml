@@ -9,12 +9,15 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Ensure full git history and all files are checked out
 
     - name: Set up Python
       uses: actions/setup-python@v4
-      with:
-        python-version: '3.12'  # Adjust as needed to match your project's Python version
+
+    - name: List files in the directory
+      run: ls -la  # Debugging step to verify files
 
     - name: Install dependencies
       run: |
