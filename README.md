@@ -12,8 +12,9 @@
 
 Chippy serves as your command-line companion, offering quick fixes, error analyses, and cheat sheets directly in your terminal environment. It bridges the gap between encountering an error and finding the solution, saving you the hassle of manual searches or sifting through documentation. To make things easier, Chippy goes by their nickname `chip` in the commmand line.
 
-Gif placeholder
-
+<p align="center">
+  <img src="demo.gif" alt="animated" />
+</p>
 ## Features
 
 - **Error Analysis**: Understand and fix common programming errors with detailed, context-aware suggestions.
