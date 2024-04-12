@@ -4,7 +4,10 @@ import textwrap
 import subprocess
 import configparser
 from openai import OpenAI
-
+from dotenv import load_dotenv
+import os
+import configparser
+import importlib.resources as pkg_resources
 
 #old config
 # Read configuration
@@ -17,23 +20,15 @@ from openai import OpenAI
 #mode = ERROR_CONFIG.get('Default', 'HardcoreMode')
 #hardcore_mode = config['DEFAULT'].get('Hardcore', 'no').lower()
 
-
-
-testv = True
-
-#test change
-import configparser
-import importlib.resources as pkg_resources
-
 def load_configuration():
     try:
         with pkg_resources.open_text('chippy_ai', 'config.ini') as config_file:
             config = configparser.ConfigParser()
             config.read_file(config_file)
             # Debug: Print out sections and keys to verify
-            print("Available sections:", config.sections())
-            for section in config.sections():
-                print(f"Keys in {section}: {list(config[section])}")
+            #print("Available sections:", config.sections())
+            #for section in config.sections():
+                #print(f"Keys in {section}: {list(config[section])}")
             return config
     except Exception as e:
         print(f"Failed to read or parse config.ini: {e}")
@@ -49,21 +44,7 @@ mode = config.get('Default', 'HardcoreMode', fallback='HardcoreModeDefault')
 hardcore_mode = config.get('DEFAULT', 'Hardcore', fallback='no').lower()
 
 
-
-
-
-
-
-
-
-
-
-
-
-#read .env
-from dotenv import load_dotenv
-import os
-
+#load env
 load_dotenv()  # load all the environment variables from a .env file
 
 api_key = os.getenv("TOGETHER_API_KEY")
