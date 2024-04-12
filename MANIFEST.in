@@ -1,2 +1,3 @@
 include chip/config.ini
+include README.md
 exclude .env
