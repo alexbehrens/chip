@@ -4,11 +4,15 @@ build-backend = "hatchling.build"
 
 [project]
 name = "chippy_ai"
-version = "0.2.7"
-description = "A small example package"
+version = "0.2.8"
+description = "A compact CLI for beginners."
 readme = "README.md"
 authors = [{ name = "Alex Behrens", email = "alexanderbbehrens@gmail.com" }]
 requires-python = ">=3.8"
+dependencies = [
+    "OpenAI",
+    "python-dotenv"
+]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: Apache Software License", 
