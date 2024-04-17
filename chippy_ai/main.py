@@ -7,6 +7,8 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import os
 import configparser
+import os
+import os
 import importlib.resources as pkg_resources
 
 #old config
@@ -201,7 +203,9 @@ def ask_gpt(question):
 
 def read_shell_file():
     try:
-        with open('shell.txt', 'r') as file:
+        package_dir = os.path.dirname(os.path.abspath(__file__))
+        file_path = os.path.join(package_dir, 'cheats', 'shell.txt')
+        with open(file_path, 'r') as file:
             shell_content = file.read()
             return shell_content
     except FileNotFoundError:
@@ -211,7 +215,7 @@ def read_shell_file():
 
 def read_git_file():
     try:
-        with open('git.txt', 'r') as file:
+        with open('/cheats/git.txt', 'r') as file:
             git_content = file.read()
             return git_content
             #formatted_content = format_in_rectangle(content)
@@ -220,6 +224,18 @@ def read_git_file():
         print("File not found: shell.txt")
     except Exception as e:
         print(f"Error reading file: {e}")
+
+
+def create_env_file(api_key):
+    try:
+        env_file_path = ".env"
+        with open(env_file_path, 'w') as file:
+            file.write(f"TOGETHER_API_KEY={api_key}")
+        print("Successfully created .env file.")
+    except Exception as e:
+        print(f"Error creating .env file: {e}")
+        #later expand function to validate the api key by running a quick call
+
 
 def main():
     red_color_code = '\033[91m'  # ANSI color code for red
@@ -259,6 +275,9 @@ def main():
             elif sys.argv[1] == "git":
                 text = read_git_file()
                 print(format_in_rectangle(text))
+            elif sys.argv[1] == "api" and len(sys.argv) > 2:
+                api_key = sys.argv[2]
+                create_env_file(api_key)
             elif sys.argv[1] == "-q" and len(sys.argv) > 2:
                 question = " ".join(sys.argv[2:])
                 answer = ask_gpt(question)
