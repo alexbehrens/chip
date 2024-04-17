@@ -47,8 +47,10 @@ hardcore_mode = config.get('DEFAULT', 'Hardcore', fallback='no').lower()
 
 
 #load env
+package_dir = os.path.dirname(os.path.abspath(__file__))
+env_file_path = os.path.join(package_dir, 'env', '.env')
+load_dotenv(env_file_path)
 load_dotenv()  # load all the environment variables from a .env file
-
 api_key = os.getenv("TOGETHER_API_KEY")
 
 
@@ -215,11 +217,11 @@ def read_shell_file():
 
 def read_git_file():
     try:
-        with open('/cheats/git.txt', 'r') as file:
+        package_dir = os.path.dirname(os.path.abspath(__file__))
+        file_path = os.path.join(package_dir, 'cheats', 'git.txt')
+        with open(file_path, 'r') as file:
             git_content = file.read()
             return git_content
-            #formatted_content = format_in_rectangle(content)
-            #print(formatted_content)
     except FileNotFoundError:
         print("File not found: shell.txt")
     except Exception as e:
@@ -228,10 +230,17 @@ def read_git_file():
 
 def create_env_file(api_key):
     try:
-        env_file_path = ".env"
-        with open(env_file_path, 'w') as file:
+
+
+
+        package_dir = os.path.dirname(os.path.abspath(__file__))
+        file_path = os.path.join(package_dir, 'env', '.env')
+        with open(file_path, 'w+') as file:
+            git_content = file.read()
             file.write(f"TOGETHER_API_KEY={api_key}")
         print("Successfully created .env file.")
+        print(f"File path: {file_path}")
+        print(f"File content:\n{file.read()}")
     except Exception as e:
         print(f"Error creating .env file: {e}")
         #later expand function to validate the api key by running a quick call
