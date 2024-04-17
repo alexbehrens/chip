@@ -13,7 +13,7 @@ setup(
         'chippy_ai': ['config.ini', 'README.md']
     },
     install_requires=[
-        'openai',          # Ensure these are the correct package names on PyPI
+        'OpenAI',          # Ensure these are the correct package names on PyPI
         'python-dotenv'
     ],
     entry_points={

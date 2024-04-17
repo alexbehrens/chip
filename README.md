@@ -37,8 +37,7 @@ Chippy serves as your command-line companion, offering quick fixes, error analys
 2. **Configuration**
 
     Set up your [together.ai](https://together.ai) key:
-    - Save API keys in your environment variables for secure access.
-    - Enter keys via command ```bash chip api "YOUR_KEY_HERE"``` 
+    - Enter API keys via command ```chip api "YOUR_KEY_HERE"``` 
     - or via the `config.ini` file
     - Configure Chippy to your liking through the `config.ini` file or via command-line options.
 

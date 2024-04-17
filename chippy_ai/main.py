@@ -11,26 +11,11 @@ import os
 import os
 import importlib.resources as pkg_resources
 
-#old config
-# Read configuration
-#config = configparser.ConfigParser()
-#config.read('config.ini')
-
-# Configurations for ERROR and QUESTION
-#ERROR_CONFIG = config['ERROR']
-#QUESTION_CONFIG = config['QUESTION']
-#mode = ERROR_CONFIG.get('Default', 'HardcoreMode')
-#hardcore_mode = config['DEFAULT'].get('Hardcore', 'no').lower()
-
 def load_configuration():
     try:
         with pkg_resources.open_text('chippy_ai', 'config.ini') as config_file:
             config = configparser.ConfigParser()
             config.read_file(config_file)
-            # Debug: Print out sections and keys to verify
-            #print("Available sections:", config.sections())
-            #for section in config.sections():
-                #print(f"Keys in {section}: {list(config[section])}")
             return config
     except Exception as e:
         print(f"Failed to read or parse config.ini: {e}")
@@ -41,7 +26,7 @@ config = load_configuration()
 ERROR_CONFIG = config['ERROR']
 QUESTION_CONFIG = config['QUESTION']
 
-# Assuming 'Default' is a section in your config.ini, and 'HardcoreMode' is a key within that section
+# Assuming 'Default' is a section in config.ini, and 'HardcoreMode' is a key within that section
 mode = config.get('Default', 'HardcoreMode', fallback='HardcoreModeDefault')
 hardcore_mode = config.get('DEFAULT', 'Hardcore', fallback='no').lower()
 
@@ -230,17 +215,12 @@ def read_git_file():
 
 def create_env_file(api_key):
     try:
-
-
-
         package_dir = os.path.dirname(os.path.abspath(__file__))
         file_path = os.path.join(package_dir, 'env', '.env')
         with open(file_path, 'w+') as file:
             git_content = file.read()
             file.write(f"TOGETHER_API_KEY={api_key}")
-        print("Successfully created .env file.")
-        print(f"File path: {file_path}")
-        print(f"File content:\n{file.read()}")
+        print(format_in_rectangle("Successfully created .env file."))
     except Exception as e:
         print(f"Error creating .env file: {e}")
         #later expand function to validate the api key by running a quick call
